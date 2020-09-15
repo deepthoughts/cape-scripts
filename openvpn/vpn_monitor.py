@@ -68,6 +68,8 @@ def check_vpn_connection(vpn_name):
         return False
 
 def main():
+    # update the ovpn file names
+    # format for ovpn file names is tun{number}_<tunnel name>.ovpn
     vpn_confs =['tun8_name1.ovpn', 'tun9_name2.ovpn']
     vpn_info = {}
     for conf in vpn_confs:
