@@ -11,6 +11,7 @@ def connect_vpn(vpn_conf):
             stderr = subprocess.PIPE,
             stdin = subprocess.PIPE)
     out, err = ph.communicate()
+    vpn_pid = ph.pid
     print('Attempting to start vpn {}'.format(vpn_name))
     print(out.decode())
     print(err.decode())
